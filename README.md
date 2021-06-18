@@ -8,6 +8,8 @@ To run this project you will need the following
   - This can be Rider, Visual Studio, VSCode or anything else that can edit code if you're OK using the command line
 - .NET Core 3.1+ SDK
 - Git, to pull down this repo
+- Optional but helpful - Tool to make HTTP Requests
+  - Insomnia, Postman, curl, httpie etc.
  
 The program will run on ports `22222` (`http`) and `33333` (`https`).
 

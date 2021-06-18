@@ -31,13 +31,13 @@ namespace WealthKernel.ShoppingCart.Data
             return item;
         }
 
-        public IList<CartItem> SearchItems(string? id, string? name)
+        public IList<CartItem> SearchItems(string? id = null, string? name = null)
         {
             var itemsQueryable = _items.Values.AsQueryable();
 
             if (!string.IsNullOrEmpty(id))
             {
-                return new[] { itemsQueryable.Single(item => item.Id == id) };
+                itemsQueryable = itemsQueryable.Where(r => r.Id == id);
             }
 
             if (!string.IsNullOrEmpty(name))
