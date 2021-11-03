@@ -14,9 +14,6 @@ namespace WealthKernel.ShoppingCart
         {
             services.AddControllers();
             services.AddMediatR(typeof(Startup));
-            
-            services.AddSingleton<ShoppingCartRepository>();
-            services.AddTransient<SimpleBus>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -3,7 +3,7 @@
     "WealthKernel.ShoppingCart": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:33333;http://localhost:22222",
+      "applicationUrl": "http://localhost:22222",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
