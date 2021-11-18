@@ -8,14 +8,14 @@ namespace WealthKernel.ShoppingCart.Data
 {
     public class ShoppingCartRepository
     {
-        private readonly ConcurrentDictionary<string,CartItem> _items;
+        private readonly ConcurrentDictionary<string,CartItemInternal> _items;
 
         public ShoppingCartRepository()
         {
-            _items = new ConcurrentDictionary<string, CartItem>();
+            _items = new ConcurrentDictionary<string, CartItemInternal>();
         } 
             
-        public void AddItem(CartItem item)
+        public void AddItem(CartItemInternal item)
         {
             var added = _items.TryAdd(item.Id, item);
             
@@ -25,13 +25,13 @@ namespace WealthKernel.ShoppingCart.Data
             }
         }
 
-        public CartItem? GetItem(string id)
+        public CartItemInternal? GetItem(string id)
         {
             _items.TryGetValue(id, out var item);
             return item;
         }
 
-        public IList<CartItem> SearchItems(string? id = null, string? name = null)
+        public IList<CartItemInternal> SearchItems(string? id = null, string? name = null)
         {
             var itemsQueryable = _items.Values.AsQueryable();
 
