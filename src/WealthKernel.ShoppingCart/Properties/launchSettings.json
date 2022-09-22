@@ -2,7 +2,6 @@
   "profiles": {
     "WealthKernel.ShoppingCart": {
       "commandName": "Project",
-      "launchBrowser": true,
       "applicationUrl": "http://localhost:22222",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
